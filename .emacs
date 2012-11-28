@@ -4,7 +4,7 @@
 
 
 ;;定义一些常量
-(defconst my-config-home "EmacsConfig/" "我的emacs相关配置文件的路径")
+(defconst my-config-home "/home/tangling/repositories/github/EmacsConfig/" "我的emacs相关配置文件的路径")
 (defconst my-site-lisps  (concat my-config-home "my-site-lisps") "我自己写的emacs lisp包的路径")
 (defconst third-part-lisps  (concat my-config-home "third-party-lisps") "我下载的emacs lisp包的路径")
 (defconst my-templates (concat my-config-home "my-templates") "存放所有的模板")
