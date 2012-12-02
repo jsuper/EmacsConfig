@@ -3,23 +3,23 @@
 
 
 
-;;¶¨ÒåÒ»Ğ©³£Á¿
-(defconst my-config-home "/home/tangling/repositories/github/EmacsConfig/" "ÎÒµÄemacsÏà¹ØÅäÖÃÎÄ¼şµÄÂ·¾¶")
-(defconst my-site-lisps  (concat my-config-home "my-site-lisps") "ÎÒ×Ô¼ºĞ´µÄemacs lisp°üµÄÂ·¾¶")
-(defconst third-part-lisps  (concat my-config-home "third-party-lisps") "ÎÒÏÂÔØµÄemacs lisp°üµÄÂ·¾¶")
-(defconst my-templates (concat my-config-home "my-templates") "´æ·ÅËùÓĞµÄÄ£°å")
+;;ï¿½ï¿½ï¿½ï¿½Ò»Ğ©ï¿½ï¿½ï¿½
+(defconst my-config-home "EmacsConfig/" "ï¿½Òµï¿½emacsï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Â·ï¿½ï¿½")
+(defconst my-site-lisps  (concat my-config-home "my-site-lisps") "ï¿½ï¿½ï¿½Ô¼ï¿½Ğ´ï¿½ï¿½emacs lispï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½")
+(defconst third-part-lisps  (concat my-config-home "third-party-lisps") "ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½emacs lispï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½")
+(defconst my-templates (concat my-config-home "my-templates") "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğµï¿½Ä£ï¿½ï¿½")
 
 
-;;½«homeÄ¿Â¼ÏÂµÄ.emacs.dºÍsite-lisp¼ÓÔØµ½Load-path
+;;ï¿½ï¿½homeÄ¿Â¼ï¿½Âµï¿½.emacs.dï¿½ï¿½site-lispï¿½ï¿½ï¿½Øµï¿½Load-path
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/site-lisp")
 
-;;¼ÓÔØ¸¨Öú¼ÓÔØ²å¼şµÄÅäÖÃÎÄ¼ş
+;;ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 (load (concat my-site-lisps "/load-helper"))
 
-;;¼ÓÔØµÚÈı·½²å¼ş
+;;ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 (load-dir third-part-lisps)
 
-;;¼ÓÔØÎÒµÄemacs ÅäÖÃÎÄ¼ş
+;;ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½emacs ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 (add-to-list 'load-path (concat my-site-lisps "settings"))
 (mapc 'load (directory-files (concat my-site-lisps "/settings") t "\\.el$"))
