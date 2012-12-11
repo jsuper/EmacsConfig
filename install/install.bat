@@ -7,16 +7,17 @@ set CURRENT_DIR=%CURRENT_DIR:\=/%
 echo [INFO] %CURRENT_DIR%
 set CONTENT=(load-file "%CURRENT_DIR%/../.emacs")
 
-VER | FIND "6.1"
+VER | FIND "6.1">>1
+del 1
 
-if errorlevel 1 goto WIN7
+if errorlevel 0 goto WIN7
 
-if errorlevel 0 goto WINXP
+echo [INFO] Win Xp Host
+set EMACS_HOME=%HOME%
 
 :WIN7
+echo [INFO] Win Seven Host
 set EMACS_HOME=%APPDATA%
-:WINXP
-set EMACS_HOME=%HOME%
 
 if not exist "%EMACS_HOME%\.emacs" goto CREATE_DOT_EMACS
 echo [INFO] Backup .emacs to .emacs.bak
