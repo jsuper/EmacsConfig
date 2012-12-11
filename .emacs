@@ -3,23 +3,23 @@
 
 
 
-;;����һЩ���
-(defconst my-config-home "/home/tangling/repositories/github/EmacsConfig/" "�ҵ�emacs���������ļ���·��")
-(defconst my-site-lisps  (concat my-config-home "my-site-lisps") "���Լ�д��emacs lisp����·��")
-(defconst third-part-lisps  (concat my-config-home "third-party-lisps") "�����ص�emacs lisp����·��")
-(defconst my-templates (concat my-config-home "my-templates") "�������е�ģ��")
+;;define const
+(defconst my-config-home "C:/Work/repositories/github/EmacsConfig/" "emacs home")
+(defconst my-site-lisps  (concat my-config-home "my-site-lisps") "All lisps which i written")
+(defconst third-part-lisps  (concat my-config-home "third-party-lisps") "third party lisps")
+(defconst my-templates (concat my-config-home "my-templates") "templates")
 
 
-;;��homeĿ¼�µ�.emacs.d��site-lisp���ص�Load-path
+;add default .emacs.d and site-lisp to load-path
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/site-lisp")
 
-;;���ظ������ز����������ļ�
+;;load the load-helper
 (load (concat my-site-lisps "/load-helper"))
 
-;;���ص���������
+;load all third-part lisps 
 (load-dir third-part-lisps)
 
-;;�����ҵ�emacs �����ļ�
+;;load my settings
 (add-to-list 'load-path (concat my-site-lisps "settings"))
 (mapc 'load (directory-files (concat my-site-lisps "/settings") t "\\.el$"))
