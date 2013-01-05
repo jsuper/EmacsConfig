@@ -23,7 +23,7 @@
 		 :sitemap-filename "sitemap.org"
 		 :sitemap-title "Sitemap"
 		 :section-numbers nil
-		 ;:style "<link rel=\"stylesheet\" href=\"./style/emacs.css\" 	type=\"text/css\"/>")
+		 :style "<link rel=\"stylesheet\" href=\"./org-style.css\" type=\"text/css\"/>"
 		 )
 		("note-static"
 		 :base-directory "C:/Work/repositories/github/notes"
