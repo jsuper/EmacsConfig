@@ -8,6 +8,7 @@
 (defconst my-site-lisps  (concat my-config-home "my-site-lisps") "All lisps which i written")
 (defconst third-part-lisps  (concat my-config-home "third-party-lisps") "third party lisps")
 (defconst my-templates (concat my-config-home "my-templates") "templates")
+(defconst my-pymacs-scripts (concat my-config-home "pymacs-scripts") "pymacs script")
 
 
 ;add default .emacs.d and site-lisp to load-path
