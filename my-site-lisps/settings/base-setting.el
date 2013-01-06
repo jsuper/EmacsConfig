@@ -93,8 +93,22 @@
 (setq ring-bell-function 'ignore)
 
 
-;; 光标靠近鼠标指针时，让鼠标指针自动让开，别挡住视线。
+; 光标靠近鼠标指针时，让鼠标指针自动让开，别挡住视线。
 (mouse-avoidance-mode 'animate)
 
 ;; 先格式化再补全
 (setq tab-always-indent 'complete)
+
+;; disable ctrl space key on linux
+
+
+(defun setting-on-linux ()
+  "settings on linux"
+   (global-set-key (kbd "C-SPC") nil))
+   ;;(setenv "LC_CTYPE" "zh_CN.UTF-8"))
+
+(if (eq system-type 'gnu/linux)
+    (setting-on-linux))
+
+
+

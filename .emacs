@@ -11,6 +11,7 @@
 (defconst my-pymacs-scripts (concat my-config-home "pymacs-scripts") "pymacs script")
 
 
+
 ;add default .emacs.d and site-lisp to load-path
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/site-lisp")
