@@ -21,6 +21,7 @@
 
 ;load all third-part lisps 
 (load-dir third-part-lisps)
+(load-dir (concat my-site-lisps "/lisps"))
 
 ;;load my settings
 (add-to-list 'load-path (concat my-site-lisps "settings"))
