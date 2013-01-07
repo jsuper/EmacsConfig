@@ -14,7 +14,8 @@
     )
   )
 
-
+; binding some settings for python-mode
+; to execute a python script, just hit F5
 (add-hook 'python-mode-hook
 	  (lambda ()
-	    (global-set-key (kbd "C-c C-e") 'execute-python-file)))
+	    (define-key python-mode-map (kbd "<f5>") 'execute-python-file)))

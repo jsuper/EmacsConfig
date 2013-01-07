@@ -5,6 +5,7 @@
 (require 'org-publish)
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
+
 ;;org-mode hook settings
 (add-hook 'org-mode-hook
 	  (lambda ()

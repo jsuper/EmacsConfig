@@ -1,4 +1,5 @@
-;(require 'color-theme)
-;(color-theme-initialize)
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-billw)
 ;(color-theme-molokai)
 ;(color-theme-calm-forest)
