@@ -5,6 +5,7 @@
 (require 'org-publish)
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
+
 ;;org-mode hook settings
 (add-hook 'org-mode-hook
 	  (lambda ()
@@ -14,8 +15,8 @@
 (setq org-publish-project-alist
 	  '(
 	    ("org-notes"
-		 :base-directory "C:/Work/repositories/github/notes"
-		 :publishing-directory "C:/Work/repositories/github/notes/publish"
+		 :base-directory "/home/commons/notes"
+		 :publishing-directory "/home/commons/notes/publish"
 		 :base-extension "org"
 		 :recursive t
 		 :publishing-function org-publish-org-to-html
@@ -26,8 +27,8 @@
 		 :style "<link rel=\"stylesheet\" href=\"./org-style.css\" type=\"text/css\"/>"
 		 )
 		("note-static"
-		 :base-directory "C:/Work/repositories/github/notes"
-		 :publishing-directory "C:/Work/repositories/github/notes/publish"
+		 :base-directory "/home/commons/notes"
+		 :publishing-directory "/home/commons/notes/publish"
 		 :recursive t
 		 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|swf\\|zip\\|gz\\|txt\\|el"
 		 :publishing-function org-publish-attachment)
