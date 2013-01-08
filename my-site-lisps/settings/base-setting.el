@@ -105,5 +105,20 @@
 ;;(setenv "LC_CTYPE" "zh_CN.UTF-8"))
 
 
+;;enable yasnippet auto insert header template after create new file
+
+
+(add-hook 'find-file-hook
+	  '(lambda ()
+	     (when (and (buffer-file-name)
+			(not (file-exists-p (buffer-file-name)))
+                        (= (point-max) 1))
+               (let ((header-snippet "HEADER")
+                     (yas/fallback-behavior 'return-nil))
+                 (insert header-snippet)
+                 ;; if can't expand snippet, delete insert string
+                 (if (not (yas/expand))
+		     (delete-region (point-min) (point-max)))))))
+
 
 
