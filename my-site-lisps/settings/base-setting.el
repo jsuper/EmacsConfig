@@ -104,10 +104,7 @@
 
 ;;(setenv "LC_CTYPE" "zh_CN.UTF-8"))
 
-
 ;;enable yasnippet auto insert header template after create new file
-
-
 (add-hook 'find-file-hook
 	  '(lambda ()
 	     (when (and (buffer-file-name)
@@ -120,5 +117,11 @@
                  (if (not (yas/expand))
 		     (delete-region (point-min) (point-max)))))))
 
+;;setting emacs font
+(set-face-attribute 'default nil :font "Consolas 12")
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font (frame-parameter nil 'font)
+		    charset
+		    (font-spec :family "Microsoft Yahei" :size 12)))
 
 
