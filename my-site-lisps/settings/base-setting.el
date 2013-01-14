@@ -7,7 +7,7 @@
 (setq user-mail-address "ling.java@gmail.com")
 (setq user-full-name "tony")
 
-;(setq-default default-directory "~")
+					;(setq-default default-directory "~")
 
 (require 'server)
 (or (server-running-p)
@@ -31,7 +31,7 @@
 ;;(setq tool-bar-mode nil)
 (tool-bar-mode -1)
 ;;不显示menubar
-;;(menu-bar-mode nil)
+(menu-bar-mode -1)
 
 ;;语法亮亮
 (global-font-lock-mode t)
@@ -43,8 +43,8 @@
 ;;不产生备份文件
 (setq make-backup-files nil)
 ;;启动最大化
-;(setq initial-frame-alist '((top . 0) (left . 0) (width . 160) (height . 70)))
-;(run-with-idle-timer 0 nil 'w32-send-sys-command 61488)  
+					;(setq initial-frame-alist '((top . 0) (left . 0) (width . 160) (height . 70)))
+					;(run-with-idle-timer 0 nil 'w32-send-sys-command 61488)  
 
 ;;设置文件编码格式
 
@@ -93,17 +93,26 @@
 (setq ring-bell-function 'ignore)
 
 
-; 光标靠近鼠标指针时，让鼠标指针自动让开，别挡住视线。
+					; 光标靠近鼠标指针时，让鼠标指针自动让开，别挡住视线。
 (mouse-avoidance-mode 'animate)
 
 ;; 先格式化再补全
 (setq tab-always-indent 'complete)
+;;设置emacs换行
+(setq print-escape-newlines t)
+
+;;; ### Coding ###
+;;; ---编码设置
+(setq default-buffer-file-coding-system 'utf-8-unix)            ;缓存文件编码
+(setq default-file-name-coding-system 'utf-8-unix)              ;文件名编码
+(setq default-keyboard-coding-system 'utf-8-unix)               ;键盘输入编码
+(setq default-process-coding-system '(utf-8-unix . utf-8-unix)) ;进程输入输出编码
+(setq default-sendmail-coding-system 'utf-8-unix)               ;发送邮件编码
+(setq default-terminal-coding-system 'utf-8-unix)               ;终端编码
 
 ;; disable ctrl space key on linux
 (global-set-key (kbd "C-SPC") nil)
-
 ;;(setenv "LC_CTYPE" "zh_CN.UTF-8"))
-
 ;;enable yasnippet auto insert header template after create new file
 (add-hook 'find-file-hook
 	  '(lambda ()
