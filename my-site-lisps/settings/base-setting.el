@@ -7,7 +7,7 @@
 (setq user-mail-address "ling.java@gmail.com")
 (setq user-full-name "tony")
 
-					;(setq-default default-directory "~")
+(setq-default default-directory "~")
 
 (require 'server)
 (or (server-running-p)
@@ -43,8 +43,8 @@
 ;;不产生备份文件
 (setq make-backup-files nil)
 ;;启动最大化
-					;(setq initial-frame-alist '((top . 0) (left . 0) (width . 160) (height . 70)))
-					;(run-with-idle-timer 0 nil 'w32-send-sys-command 61488)  
+;(setq initial-frame-alist '((top . 0) (left . 0) (width . 160) (height . 70)))
+(run-with-idle-timer 0 nil 'w32-send-sys-command 61488)  
 
 ;;设置文件编码格式
 
@@ -93,7 +93,7 @@
 (setq ring-bell-function 'ignore)
 
 
-					; 光标靠近鼠标指针时，让鼠标指针自动让开，别挡住视线。
+;; 光标靠近鼠标指针时，让鼠标指针自动让开，别挡住视线。
 (mouse-avoidance-mode 'animate)
 
 ;; 先格式化再补全
