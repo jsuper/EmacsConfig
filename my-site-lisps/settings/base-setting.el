@@ -44,7 +44,7 @@
 (setq make-backup-files nil)
 ;;启动最大化
 ;(setq initial-frame-alist '((top . 0) (left . 0) (width . 160) (height . 70)))
-(run-with-idle-timer 0 nil 'w32-send-sys-command 61488)  
+;;(run-with-idle-timer 0 nil 'w32-send-sys-command 61488)  
 
 ;;设置文件编码格式
 
