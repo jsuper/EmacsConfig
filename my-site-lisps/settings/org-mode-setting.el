@@ -19,14 +19,20 @@
    (interactive)
    (org-publish "note" t))
 
+(defun non-force-publish-all ()
+  "Only publish the modified files"
+  (interactive)
+  (org-publish "note"))
 
+(defconst notes-root-dir "C:/Work/repositories/bitbucket/mynotes/notes" "notesroot-dir")
 
+	     
 ;;org-mode hook settings
 (add-hook 'org-mode-hook
 	  (lambda ()
 	    (setq truncate-lines nil)
 	    (local-set-key (kbd "C-c C-p") 'force-publish-all)
-	    (global-set-key (kbd "<f8> p") 'org-publish-all)))
+	    (global-set-key (kbd "<f8> p") 'non-force-publish-all)))
 
 (setq org-publish-project-alist
 	  '(

@@ -92,7 +92,6 @@
 ;; 没有提示音,也不闪屏
 (setq ring-bell-function 'ignore)
 
-
 ;; 光标靠近鼠标指针时，让鼠标指针自动让开，别挡住视线。
 (mouse-avoidance-mode 'animate)
 
@@ -126,11 +125,14 @@
                  (if (not (yas/expand))
 		     (delete-region (point-min) (point-max)))))))
 
-;;setting emacs font
-(set-face-attribute 'default nil :font "Consolas 12")
-(dolist (charset '(kana han symbol cjk-misc bopomofo))
-  (set-fontset-font (frame-parameter nil 'font)
+(set-frame-font "Consolas:pixelsize=14")
+(dolist (charset '(han kana symbol cjk-misc bopomofo))  
+  (set-fontset-font (frame-parameter nil 'font) 
 		    charset
-		    (font-spec :family "Microsoft Yahei" :size 12)))
-
-
+		    (font-spec :family "WenQuanYi Micro Hei Mono" :size 16)))
+;;setting emacs font
+;(set-face-attribute 'default nil :font "Monaco 12")
+;(dolist (charset '(kana han symbol cjk-misc bopomofo))
+;  (set-fontset-font (frame-parameter nil 'font);
+;		    charset
+;		    (font-spec :family "Microsoft YaHei" :size 14))
