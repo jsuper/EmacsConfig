@@ -10,8 +10,9 @@
 (setq-default default-directory "~")
 
 (require 'server)
-(or (server-running-p)
-    (server-start))
+(if (get-process "server")
+    (message "server already start")
+  (server-start))
 
 ;; 显示列号
 (setq column-number-mode t)
