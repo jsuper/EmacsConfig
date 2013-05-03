@@ -4,7 +4,7 @@
 
 
 ;;define const
-(defconst my-config-home "/home/commons/repositories/github/EmacsConfig/" "emacs home")
+;;(defconst my-config-home "/home/jobs/github/EmacsConfig/" "emacs home")
 (defconst my-site-lisps  (concat my-config-home "my-site-lisps") "All lisps which i written")
 (defconst third-part-lisps  (concat my-config-home "third-party-lisps") "third party lisps")
 (defconst my-templates (concat my-config-home "my-templates") "templates")
