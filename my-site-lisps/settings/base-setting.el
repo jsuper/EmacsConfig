@@ -10,13 +10,15 @@
 (setq-default default-directory "~")
 
 (require 'server)
-(or (server-running-p)
-    (server-start))
+(if (get-process "server")
+    (message "server already start")
+  (server-start))
 
 ;; 显示列号
 (setq column-number-mode t)
 ;;显示行号
 (linum-mode t)
+(global-linum-mode t)
 ;;标题栏显示buffer名字
 (setq frame-title-format "emacs@%b")
 
@@ -43,7 +45,7 @@
 (setq make-backup-files nil)
 ;;启动最大化
 ;(setq initial-frame-alist '((top . 0) (left . 0) (width . 160) (height . 70)))
-(run-with-idle-timer 0 nil 'w32-send-sys-command 61488)  
+;;(run-with-idle-timer 0 nil 'w32-send-sys-command 61488)  
 
 ;;设置文件编码格式
 
@@ -90,7 +92,6 @@
 (blink-cursor-mode -1)
 ;; 没有提示音,也不闪屏
 (setq ring-bell-function 'ignore)
-
 
 ;; 光标靠近鼠标指针时，让鼠标指针自动让开，别挡住视线。
 (mouse-avoidance-mode 'animate)

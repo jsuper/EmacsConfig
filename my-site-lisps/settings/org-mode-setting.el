@@ -21,6 +21,13 @@
 
 
 
+(defun non-force-publish-all ()
+  "Only publish the modified files"
+  (interactive)
+  (org-publish "note"))
+
+
+	     
 ;;org-mode hook settings
 (add-hook 'org-mode-hook
 	  (lambda ()
@@ -54,3 +61,15 @@
 		 )
 		)
 	    )
+
+ (setq org-publish-project-alist
+           '(("demo"
+              :base-directory "."
+	      :base-extension "org"
+	      :publishing-directory "."
+              :section-numbers nil
+              :with-toc nil
+	      :html-preamble nil
+	      :html-postamble nil
+	      :table-of-contents nil
+	      )))
